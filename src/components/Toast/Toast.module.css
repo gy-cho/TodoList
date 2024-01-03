@@ -1,0 +1,42 @@
+.toast {
+  position: fixed;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 5px 15px -10px #bbb, 0px -5px 15px -10px #bbb;
+  padding: 10px 30px 10px 20px;
+  border-radius: 5px;
+  /* border: 1px solid #82cda1; */
+  display: inline-block;
+
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1; /* 초기 상태에서는 투명하지 않음 */
+}
+
+.toast.hidden {
+  opacity: 0; /* visible이 false일 때 투명해지도록 */
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-wrapper b {
+  font-size: 1.2rem;
+}
+
+.content-wrapper div {
+  font-size: 0.8rem;
+}
+
+.icon {
+  width: 40px;
+  margin-right: 1.5rem;
+}
+
+/* Success  #82cda1 */
+/* Error    #de605f */
+/* Warning  #edca72 */
+/* Info     #4481de */

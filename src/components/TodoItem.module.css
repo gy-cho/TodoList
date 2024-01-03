@@ -1,0 +1,80 @@
+.item-wrapper {
+  display: flex;
+  position: relative;
+}
+.todo-item {
+  width: 100%;
+  height: 3rem;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.15s;
+  user-select: none;
+}
+
+.todo-item:hover {
+  background: #e3fafc;
+}
+
+.todo-item:hover .remove {
+  opacity: 1;
+}
+
+.item-wrapper + .item-wrapper {
+  border-top: 1px solid #f1f3f5;
+}
+
+.icon {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  padding: 0.5rem;
+}
+
+.remove {
+  margin-right: 1rem;
+  opacity: 0;
+  font-weight: 600;
+  color: #e64980;
+}
+
+.todo-text {
+  flex: 1;
+  word-break: break-all;
+}
+
+.todo-text input {
+  width: 100%;
+  flex: 1;
+  font-size: 0.9rem;
+  padding: 5px 0;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #c5f6fa;
+}
+
+.checked {
+  text-decoration: line-through;
+  color: #adb5bd;
+}
+
+.palette {
+  cursor: pointer;
+  height: auto;
+  width: 2rem;
+  background: #e64980;
+}
+
+.color-picker {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #333e;
+  color: white;
+  border-radius: 5px;
+  display: inline-block;
+  z-index: 999;
+}
