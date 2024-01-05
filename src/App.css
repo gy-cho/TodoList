@@ -1,5 +1,6 @@
 .App {
-  text-align: center;
+  margin: 0 auto;
+  /* text-align: center; */
 }
 
 .App-logo {
@@ -37,14 +38,11 @@
   }
 }
 
-.test {
-  position: fixed;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #333e;
-  color: white;
-  padding: 15px;
-  border-radius: 5px;
-  display: inline-block;
+.flex {
+  display: flex;
+  margin: 5rem;
+}
+
+.flex > * {
+  margin: 0 auto;
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import TodoListTemplate from './components/TodoListTemplate';
+import CalendarTemplate from './components/Calendar/CalendarTemplate';
 import Form from './components/Form';
 import TodoItemList from './components/TodoItemList';
 import Toast from './components/Toast/Toast';
@@ -105,51 +106,55 @@ function App() {
 
   return (
     <>
-      <TodoListTemplate
-        form={
-          <Form
-            value={input}
-            onChange={handleChange}
-            onCreate={handleCreate}
-            onKeyPress={handleKeyPress}
-          />
-        }
-      >
-        <TodoItemList
-          todos={todos}
-          onToggle={handleToggle}
-          onRemove={handleRemove}
-          onColorChange={handleColorChange}
-          onEdit={handleEdit}
-          onEditInput={handleEditInput}
-        ></TodoItemList>
-      </TodoListTemplate>
-      <Toast
-        visible={toastVisible}
-        setVisible={setToastVisible}
-        type={toastType}
-        msg={toastMessage}
-      ></Toast>
+      <div className='flex'>
+        <CalendarTemplate></CalendarTemplate>
+        <TodoListTemplate
 
-      {/* TEST */}
-      {/* {todos.map((item) => (
-        <div key={item.id}>
-          {item.text} {item.color} {`${item.isEdit}`}
-        </div>
-      ))} */}
+          form={
+            <Form
+              value={input}
+              onChange={handleChange}
+              onCreate={handleCreate}
+              onKeyPress={handleKeyPress}
+            />
+          }
+        >
+          <TodoItemList
+            todos={todos}
+            onToggle={handleToggle}
+            onRemove={handleRemove}
+            onColorChange={handleColorChange}
+            onEdit={handleEdit}
+            onEditInput={handleEditInput}
+          ></TodoItemList>
+        </TodoListTemplate>
+        <Toast
+          visible={toastVisible}
+          setVisible={setToastVisible}
+          type={toastType}
+          msg={toastMessage}
+        ></Toast>
 
-      <button onClick={() => showToast('success', '성공 토스트 입니다.')}>
-        성공
-      </button>
-      <button onClick={() => showToast('warning', '경고 토스트 입니다.')}>
-        경고
-      </button>
-      <button onClick={() => showToast('error', '오류 토스트 입니다.')}>
-        오류
-      </button>
-      <button onClick={() => showToast('info', '정보 토스트 입니다.')}>
-        정보
-      </button>
+        {/* TEST */}
+        {/* {todos.map((item) => (
+          <div key={item.id}>
+            {item.text} {item.color} {`${item.isEdit}`}
+          </div>
+        ))} */}
+
+        {/* <button onClick={() => showToast('success', '성공 토스트 입니다.')}>
+          성공
+        </button>
+        <button onClick={() => showToast('warning', '경고 토스트 입니다.')}>
+          경고
+        </button>
+        <button onClick={() => showToast('error', '오류 토스트 입니다.')}>
+          오류
+        </button>
+        <button onClick={() => showToast('info', '정보 토스트 입니다.')}>
+          정보
+        </button> */}
+      </div>
     </>
   );
 }

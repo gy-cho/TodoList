@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'; // PropTypes 추가
 import TodoItem from './TodoItem';
+import styles from './TodoItemlist.module.css'
 
 class TodoItemList extends Component {
-  constructor() {
-    super();
-  }
+  // constructor() {
+  //   super();
+  // }
 
   shouldComponentUpdate(nextProps) {
     return this.props.todos !== nextProps.todos;
@@ -31,7 +32,7 @@ class TodoItemList extends Component {
       ></TodoItem>
     ));
 
-    return <div>{todoList}</div>;
+    return <div className={styles.list}>{todoList}</div>;
   }
 }
 

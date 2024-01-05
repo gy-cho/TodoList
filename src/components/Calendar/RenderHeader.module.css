@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  align-items: end;
+  padding: 0.5rem;
+  color: pink;
+
+}
+
+.header span {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-right: 0.2rem;
+  color : palevioletred
+}
+
+.icon {
+  margin-left: auto;
+}
+
+.icon > * {
+  margin-left: 1rem;
+}

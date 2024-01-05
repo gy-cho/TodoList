@@ -1,27 +1,31 @@
 .todo-list-template {
-  background: white;
   width: 512px;
-  margin: 0 auto;
+  background: white;
   margin-top: 4rem;
+  border-radius: 10px;
   box-shadow:
     0 3px 6px rgba(0, 0, 0, 0.16),
     0px 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .title {
-  background: #22b8cf;
-  padding: 2rem;
-  font-size: 2.5rem;
-  text-align: center;
+  padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+  font-size: 2rem;
   font-weight: 100;
-  color: white;
+  color: #22b8cf;
+}
+
+.calendar-wrapper {
+  width: 100%;
 }
 
 .form-wrapper {
   padding: 1rem;
-  border-bottom: 1px solid #22b8cf;
+  border-bottom: 0.5px solid #22b8cf;
 }
 
 .todos-wrapper {
+  height: auto;
   min-height: 5rem;
+  overflow: hidden;
 }

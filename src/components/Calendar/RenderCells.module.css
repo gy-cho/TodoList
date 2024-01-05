@@ -1,0 +1,44 @@
+.day {
+  flex: 1;
+  text-align: center; 
+  height: 3rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  margin: 2px;
+  border: 1px solid transparent
+
+}
+
+.disabled span {
+  color : #ddd;
+}
+
+.selected {
+  border: 1px solid orange;
+  background-color: #FFFFF4;
+  box-shadow:
+  0 3px 3px rgba(128, 87, 61, 0.16),
+  0px 3px 1px rgba(128, 87, 61, 0.16);
+}
+.selected span {
+  color : orange
+}
+
+.sunday span {
+  color :palevioletred;
+}
+
+.saturday span {
+  color:cadetblue
+}
+
+.not-valid {
+  background-color: aqua;
+}
+
+.days {
+  display: flex;
+  width: 100%;
+  text-align: left;
+  align-items: start;
+}

@@ -17,7 +17,7 @@ const Form = ({ value, onChange, onCreate, onKeyPress }) => {
         role='button'
         tabIndex='0'
       >
-        추가
+        +
       </div>
     </div>
   );
