@@ -37,11 +37,17 @@
   }
 }
 
-.flex {
-  display: flex;
-  margin: 5rem;
+@media screen and (min-width: 768px) {
+  .flex {
+    display: flex;
+  }    
 }
 
+@media screen and (max-width: 767px) {
+  .flex {
+    display: default;
+  }    
+}
 .flex > * {
-  margin: 0 auto;
+  margin: 1.5rem;
 }

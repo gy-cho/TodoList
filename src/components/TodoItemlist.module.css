@@ -1,4 +1,16 @@
+
+@media screen and (min-width: 768px) {
+  .list {
+    height: 480px;
+  }    
+}
+
+@media screen and (max-width: 767px) {
+  .list {
+    height: 300px;
+  }    
+}
+
 .list {
-  height: 480px;
   overflow: auto;
 }

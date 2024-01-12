@@ -47,6 +47,7 @@ const Toast = ({ visible, setVisible, type, msg }) => {
 
   return (
     <>
+    
       <div
         className={`${styles.toast} ${
           visible ? styles.visible : styles.hidden

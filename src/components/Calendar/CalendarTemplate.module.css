@@ -2,10 +2,19 @@
   user-select: none;
 }
 
+@media screen and (min-width: 768px) {
+  .calendar{
+    width: 32rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .calendar{
+    height: 20rem;
+  }
+}
+
 .calendar {
-  width: 70vh;
   background: white;
-  margin-top: 4rem;
   padding: 1rem;
   border-radius: 10px;
   box-shadow:

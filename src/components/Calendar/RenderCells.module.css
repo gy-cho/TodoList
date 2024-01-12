@@ -1,7 +1,17 @@
+@media screen and (min-width: 768px) {
+  .day {
+    height: 3rem;
+  }  
+}
+@media screen and (max-width: 767px) {
+  .day {
+    height: 1rem;
+  }  
+}
+
 .day {
   flex: 1;
   text-align: center; 
-  height: 3rem;
   padding: 0.5rem;
   border-radius: 10px;
   margin: 2px;

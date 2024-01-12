@@ -7,6 +7,8 @@ import TodoItemList from './components/TodoItemList';
 import Toast from './components/Toast/Toast';
 
 function App() {
+  const [selectedDate, setSelectedDate] = useState(new Date());
+
   const [toastMessage, setToastMessage] = useState('');
   const [toastVisible, setToastVisible] = useState(false);
   const [toastType, setToastType] = useState('success');
@@ -17,21 +19,21 @@ function App() {
       id: 0,
       text: ' 리액트 소개',
       checked: false,
-      color: '#e64980',
+      color: '#ffc0cb',
       isEdit: false,
     },
     {
       id: 1,
       text: ' 리액트 소개',
       checked: true,
-      color: '#e64980',
+      color: '#ffc0cb',
       isEdit: false,
     },
     {
       id: 2,
       text: ' 리액트 소개',
       checked: false,
-      color: '#f39c12',
+      color: '#ffc0cb',
       isEdit: false,
     },
   ]);
@@ -56,8 +58,11 @@ function App() {
     showToast(`success`, `할 일이 추가되었습니다.`);
   };
 
-  const handleKeyPress = (e) => {
-    if (e.key === 'Enter') {
+  const handleKeyDown = (e) => {
+    // 한글 입력 후 엔터 시 마지막 글자 입력이 한번 더 발생하는 문제
+    // nativeEvent.isComposing 조건을 추가해 해결
+    if (e.key === 'Enter' && !e.nativeEvent.isComposing) {
+      console.error('왜 두번')
       handleCreate();
     }
   };
@@ -104,18 +109,23 @@ function App() {
     setToastMessage(msg);
   };
 
+  const onDateClick = (day) => {
+    setSelectedDate(day);
+  }
+
   return (
     <>
       <div className='flex'>
-        <CalendarTemplate></CalendarTemplate>
+        <CalendarTemplate selectedDate={selectedDate} onDateClick={onDateClick}></CalendarTemplate>
         <TodoListTemplate
-
+          week={selectedDate.toLocaleDateString('en-US', { weekday: 'short' })}
+          day={selectedDate.getDate()}
           form={
             <Form
               value={input}
               onChange={handleChange}
               onCreate={handleCreate}
-              onKeyPress={handleKeyPress}
+              onKeyDown={handleKeyDown}
             />
           }
         >

@@ -14,7 +14,7 @@ const CircleCheckOn = () => {
         strokeLinejoin='round'
         strokeWidth='2'
       >
-        <circle cx='12' cy='12' r='9' fill='#3acb8a' fillOpacity='.3' />
+        <circle cx='12' cy='12' r='9' fill='#fff' fillOpacity='.3' />
         <path
           fill='none'
           strokeDasharray='14'

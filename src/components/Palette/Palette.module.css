@@ -1,9 +1,8 @@
+
 .palette-wrapper {
-  position: absolute;
-  top: 185%;
-  left: 27%;
-  transform: translate(-50%, -50%);
-  background-color: #ddd;
+  position: fixed;
+  transform: translate(-7.8%, 110%);
+  background-color: #eee;
   box-shadow: 2px 2px 5px #aaa;
   padding: 15px;
   border-radius: 5px;
@@ -18,7 +17,7 @@
     left: 10%;
     border-width: 10px; /* 삼각형 크기 조절 */
     border-style: solid;
-    border-color: transparent transparent #ddd transparent;
+    border-color: transparent transparent #eee transparent;
     transform: translateX(-50%); /* 꼬리 위치 가운데 정렬 */
   }
 }

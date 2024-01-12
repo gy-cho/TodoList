@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import styles from './Palette.module.css';
 import PropTypes from 'prop-types';
 
@@ -6,27 +6,39 @@ const Palette = ({ visible, onClick }) => {
   const colorList = [
     // '#000000', // 기본 검정색
     // '#FFFFFF', // 기본 흰색
-    '#e64980', // default
-    '#3498db', // 파란색
-    '#2ecc71', // 녹색
-    '#e74c3c', // 빨간색
-    '#f39c12', // 주황색
-    '#9b59b6', // 보라색
-    '#34495e', // 짙은 회색/블루그레이
-    '#1abc9c', // 청록색
-    '#e67e22', // 갈색/주황갈색
+    '#ffc0cb', // 연한 분홍색
+    '#add8e6', // 연한 파란색
+    '#98fb98', // 연한 녹색
+    '#fa8072', // 연한 빨간색
+    '#ffcc66', // 연한 주황색
+    '#dda0dd', // 연한 보라색
+    '#d3d3d3', // 연한 회색
+    '#afeeee', // 연한 청록색
+    '#f4a460', // 연한 갈색
   ];
+  const paletteRef = useRef();
 
   useEffect(() => {
-    if (visible) {
-      const timer = setTimeout(() => {
-        // setVisible(false);
-      }, 2000);
+    const handleClickOutside = (event) => {
+      if(paletteRef.current && !paletteRef.current.contains(event.target)) {
+        onClick('#e64980');
+      }
+    };
 
-      return () => {
-        clearTimeout(timer);
-      };
-    }
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.addEventListener('mousedown', handleClickOutside);
+    };
+
+    // if (visible) {
+    //   const timer = setTimeout(() => {
+    //   }, 2000);
+
+    //   return () => {
+    //     clearTimeout(timer);
+    //   };
+    // }
   });
 
   return (
@@ -47,11 +59,7 @@ const Palette = ({ visible, onClick }) => {
                   e.stopPropagation();
                   onClick(color);
                 }}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter') {
-                    onClick(color);
-                  }
-                }}
+                onKeyDown={(e) => {}}
                 role='button'
                 tabIndex='0'
               ></div>
@@ -60,18 +68,12 @@ const Palette = ({ visible, onClick }) => {
         </div>
       )}
     </>
-    // <div
-    //   className={`${styles.toast} ${visible ? styles.visible : styles.hidden}`}
-    // >
-    //   {msg}
-    // </div>
   );
 };
 
 Palette.propTypes = {
   visible: PropTypes.bool.isRequired,
   onClick: PropTypes.func.isRequired,
-  // setVisible: PropTypes.func.isRequired,
 };
 
 export default Palette;

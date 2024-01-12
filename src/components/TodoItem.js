@@ -72,11 +72,7 @@ class TodoItem extends Component {
           <div
             className={styles['todo-item']}
             onClick={() => this.handleToggle()}
-            onKeyDown={() => {
-              // if (e.key === 'Enter') {
-              //   onToggle(id, !checked);
-              // }
-            }}
+            onKeyDown={() => {}}
             role='button'
             tabIndex='0'
           >
@@ -86,11 +82,7 @@ class TodoItem extends Component {
                 e.stopPropagation();
                 onRemove(id);
               }}
-              onKeyDown={() => {
-                // if (e.key === 'Enter') {
-                //   onRemove(id);
-                // }
-              }}
+              onKeyDown={() => {}}
               role='button'
               tabIndex='0'
             >
