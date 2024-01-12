@@ -7,8 +7,8 @@
   font-size: 1.25rem;
   outline: none;
   border: none;
-  background-color: #eff;
-  color: #22b8cf;
+  background-color: #FFFDEA;
+  color: #FFA500;
   border-radius: 20px;
   padding: 0 1.5rem;
 }
@@ -19,7 +19,7 @@
   padding-left: 1rem;
   padding-right: 1rem;
   margin-left: 1rem;
-  background: #22b8cf;
+  background: #FFA500;
   border-radius: 20px;
   color: white;
   font-weight: 500;
@@ -27,5 +27,5 @@
 }
 
 .create-button:hover {
-  background: #3bc9db;
+  background: #FFBF66;
 }
