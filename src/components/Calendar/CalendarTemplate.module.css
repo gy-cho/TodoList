@@ -10,6 +10,7 @@
 @media screen and (max-width: 767px) {
   .calendar{
     height: 20rem;
+    min-width: 350px;
   }
 }
 

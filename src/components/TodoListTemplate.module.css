@@ -1,9 +1,13 @@
 @media screen and (min-width: 768px) {
   .todo-list-template{
-    width: 32rem;
+    flex: 1;
   }
 }
-
+@media screen and (max-width: 767px) {
+  .todo-list-template{
+    min-width: 382px;
+  }
+}
 .todo-list-template {
   background: white;
   border-radius: 10px;

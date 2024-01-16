@@ -2,6 +2,7 @@
   display: flex;
   position: relative;
 }
+
 .todo-item {
   width: 100%;
   padding: 0 1rem;
@@ -54,6 +55,7 @@
 
 .checked {
   text-decoration: line-through;
+  background-color: #f8f8f8;
   color: #adb5bd;
 }
 

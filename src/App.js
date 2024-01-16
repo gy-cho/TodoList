@@ -51,7 +51,7 @@ function App() {
     setTodos((prevTodos) => [
       ...prevTodos,
       // color: '' 로 해도 default 색상이 자동 할당되지만 color 데이터가 null이 되므로 기본값 설정
-      { id: id, text: input, checked: false, color: 'e64980', isEdit: false },
+      { id: id, text: input, checked: false, color: '#ffc0cb', isEdit: false },
     ]);
     setId((prevId) => prevId + 1);
     setInput('');

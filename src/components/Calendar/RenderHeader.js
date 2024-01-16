@@ -8,8 +8,8 @@ const RenderHeader = ({currentMonth, prevMonth, nextMonth}) => {
       <span> {format(currentMonth, 'MMM')} </span>
       {format(currentMonth, 'yyyy')}
       <div className={styles.icon}>
-        <Icon icon="bi:arrow-left-circle-fill" width={20} onClick={prevMonth}/>
-        <Icon icon="bi:arrow-right-circle-fill" width={20} onClick={nextMonth}/>
+        <Icon icon="tabler:circle-arrow-left-filled" width={20} onClick={prevMonth}/>
+        <Icon icon="tabler:circle-arrow-right-filled" width={20} onClick={nextMonth}/>
       </div>
     </div>
   );

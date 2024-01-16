@@ -56,7 +56,7 @@ class TodoItem extends Component {
     const { paletteVisible, editText } = this.state;
     return (
       <>
-        <div className={styles['item-wrapper']}>
+        <div className={`${styles['item-wrapper']} ${checked && styles.checked}`}>
           <div
             className={styles.palette}
             style={{ background: color }}
@@ -89,7 +89,7 @@ class TodoItem extends Component {
               &times;
             </div>
             <div
-              className={`${styles['todo-text']} ${checked && styles.checked}`}
+              className={`${styles['todo-text']}`}
             >
               {isEdit ? (
                 <input
